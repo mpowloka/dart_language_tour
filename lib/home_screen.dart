@@ -1,4 +1,4 @@
-import 'package:dart_language_tour/user.dart';
+import 'package:dart_language_tour/insert_user.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -23,9 +23,7 @@ class HomeScreen extends StatelessWidget {
 }
 
 void doStuff() {
-  const emptyUser = User.empty();
+  var insertUserUseCase = InsertUserUseCase();
 
-  const sameEmptyUser = User.empty();
-
-  print(emptyUser == sameEmptyUser); //true
+  print(insertUserUseCase is IdGenerator); //?
 }

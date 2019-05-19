@@ -8,7 +8,7 @@ class InsertUserUseCase with IdGenerator, IdGenerator2 {
   void insertUser(User user) {
 
     repository.insertUser(
-      id: generateId(),
+      id: super.generateId(),
       user: user
     );
 
