@@ -25,6 +25,21 @@ class HomeScreen extends StatelessWidget {
 
 void doStuff() {
 
-  print("Hello world!");
+  int number = 2147483647 + 1;
+  var number2 = 2147483647 + 1;
+  final number3 = 2147483647 + 1;
+
+  final numbersList = [number, number2, number3];
+
+  final numbersSet = {number, number2, number3};
+
+  final numbersMap = {1: number, 2: number2, 3: number3};
+
+  print(numbersList);
+  print(numbersSet);
+  print(numbersMap);
 
 }
+
+
+
