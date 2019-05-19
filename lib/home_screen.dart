@@ -1,4 +1,4 @@
-import 'package:dart_language_tour/util.dart';
+import 'package:dart_language_tour/user.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -9,30 +9,23 @@ class HomeScreen extends StatelessWidget {
         title: Text("Dart language tour"),
       ),
       body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            RaisedButton(
-              child: Text("Click me!"),
-              onPressed: doStuff,
-            ),
-          ],
-        )
-      ),
+          child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: <Widget>[
+          RaisedButton(
+            child: Text("Click me!"),
+            onPressed: doStuff,
+          ),
+        ],
+      )),
     );
   }
-
 }
 
 void doStuff() {
+  const emptyUser = User.empty();
 
-  final number = getRandomNumber();
+  const sameEmptyUser = User.empty();
 
-  print(number);
-
+  print(emptyUser == sameEmptyUser); //true
 }
-
-
-
-
-
