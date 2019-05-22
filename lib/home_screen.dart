@@ -23,7 +23,7 @@ class HomeScreen extends StatelessWidget {
 }
 
 void doStuff() {
-  var insertUserUseCase = InsertUserUseCase();
+  var insertUserUseCase = InsertUserUseCaseImpl();
 
   print(insertUserUseCase is IdGenerator); //?
 }

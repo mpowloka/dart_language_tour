@@ -1,10 +1,18 @@
 import 'package:dart_language_tour/user.dart';
-import 'package:dart_language_tour/util.dart';
 
-class InsertUserUseCase with IdGenerator, IdGenerator2 {
+
+abstract class InsertUserUseCase {
+
+  void insertUser(User user);
+
+}
+
+
+class InsertUserUseCaseImpl extends InsertUserUseCase with IdGenerator, IdGenerator2 {
 
   dynamic repository;
 
+  @override
   void insertUser(User user) {
 
     repository.insertUser(
@@ -13,23 +21,18 @@ class InsertUserUseCase with IdGenerator, IdGenerator2 {
     );
 
   }
-
 }
+
 
 
 mixin IdGenerator {
-
   int generateId() {
-    return getRandomNumber(maxValue: 1000);
+    return 1;
   }
-
 }
 
 class IdGenerator2 {
-
   int generateId() {
-    return getRandomNumber(maxValue: 1000);
+    return 2;
   }
-
 }
-
